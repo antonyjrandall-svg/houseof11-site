@@ -1,0 +1,93 @@
+/* 11 house — shared estate styles. One dark-rum world. */
+:root{
+  --rum:#2A1C12; --panel:#352618; --panel-2:#3E2C1C;
+  --display:#E9CF9B; --body:#C7A773; --kicker:#C6A15B; --quiet:#9E8052; --rule:#856B42;
+  --serif:'Cormorant Garamond', Georgia, serif; --sans:Montserrat, Arial, sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--rum); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.65;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));}
+img{max-width:100%;}
+.wrap{max-width:1040px; margin:0 auto;}
+a{color:var(--display); text-decoration:none; border-bottom:1px solid var(--rule);}
+a:hover{border-bottom-color:var(--display);}
+a:focus-visible{outline:2px solid var(--kicker); outline-offset:3px;}
+h1,h2,h3{font-family:var(--serif); font-weight:500; color:var(--display); text-wrap:balance; margin:0;}
+.kicker{font-size:12px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--kicker);}
+
+/* masthead + nav */
+header.top{display:flex; align-items:center; justify-content:space-between; gap:14px; padding-block:20px; border-bottom:1px solid var(--rule); flex-wrap:wrap;}
+.mark{display:flex; align-items:baseline; gap:12px;}
+.mark a.eleven{font-family:var(--serif); font-size:30px; font-weight:600; color:var(--display); border-bottom:none;}
+.mark .dom{font-size:11px; letter-spacing:.24em; color:var(--quiet); text-transform:uppercase;}
+nav.site{display:flex; gap:18px; flex-wrap:wrap; align-items:center;}
+nav.site a{font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--body); border-bottom:none; padding-bottom:2px;}
+nav.site a:hover{color:var(--display);}
+nav.site a.here{color:var(--display); border-bottom:1px solid var(--kicker);}
+.test{font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--rum); background:var(--kicker); padding:4px 9px; border-radius:2px; white-space:nowrap;}
+
+/* hero */
+.hero{padding-block:64px 52px; border-bottom:1px solid var(--rule); display:flex; flex-direction:column; gap:22px;}
+.hero .pre{font-family:var(--serif); font-style:italic; font-size:20px; color:var(--kicker); margin:0;}
+.hero h1{font-size:clamp(46px, 7vw, 78px); line-height:1.04;}
+.hero .hrule{width:96px; height:2px; background:var(--rule);}
+.hero p.lede{font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.55; margin:0; max-width:44em;}
+.hero .coming{font-size:12px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--quiet);}
+
+/* sections */
+section{padding-block:48px; border-bottom:1px solid var(--rule); display:flex; flex-direction:column; gap:20px;}
+section.last{border-bottom:none;}
+.lede{margin:0; max-width:44em;}
+.cols{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+.cols.four{grid-template-columns:repeat(4, 1fr);}
+.cols.two{grid-template-columns:repeat(2, 1fr);}
+@media (max-width: 880px){ .cols, .cols.two{grid-template-columns:1fr;} .cols.four{grid-template-columns:1fr 1fr;} }
+@media (max-width: 500px){ .cols.four{grid-template-columns:1fr;} }
+.col{border-top:1px solid var(--rule); padding-top:14px; display:flex; flex-direction:column; gap:8px; min-width:0;}
+.col h3{font-size:19px; font-style:italic;}
+.col .tag{font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--kicker);}
+.col p{margin:0; font-size:14.5px;}
+
+/* cards */
+.cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+@media (max-width: 880px){ .cards{grid-template-columns:1fr;} }
+.card{background:var(--panel); border:1px solid var(--rule); border-radius:4px; padding:28px 26px; display:flex; flex-direction:column; gap:12px; min-width:0;}
+.card .ord{font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--kicker);}
+.card h3{font-size:27px;}
+.card .abv{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--quiet);}
+.card p{margin:0; font-size:14.5px;}
+.card ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; font-size:14px;}
+.card ul li{padding-left:15px; position:relative;}
+.card ul li::before{content:"·"; position:absolute; left:2px; color:var(--kicker);}
+.card .cta{margin-top:auto; padding-top:12px; border-top:1px solid var(--rule); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600;}
+.card .cta a{border-bottom:none;}
+.card .cta a::after{content:" →";}
+
+/* discipline list */
+.disc{display:grid; grid-template-columns:1fr 1fr; gap:8px 36px; margin:0; padding:0; list-style:none; font-size:15px; max-width:56em;}
+@media (max-width: 700px){ .disc{grid-template-columns:1fr;} }
+.disc li{padding-left:0; display:flex; gap:12px; align-items:baseline;}
+.disc li b{font-family:var(--serif); color:var(--kicker); font-weight:500; min-width:1.6em;}
+
+/* band */
+.band{background:var(--panel); border:1px solid var(--rule); border-radius:4px; padding:38px 34px; display:flex; flex-direction:column; gap:14px;}
+.band h2{font-size:clamp(28px, 4vw, 38px);}
+.band p{margin:0; max-width:46em;}
+.band .mail{font-size:14px; letter-spacing:.08em; color:var(--display); font-weight:600;}
+.reserve{font-family:var(--serif); font-style:italic; font-size:18px; color:var(--quiet); margin:0;}
+.smallnote{font-size:12px; color:var(--quiet); margin:0;}
+
+/* imagery — from the working wall */
+.ph{width:100%; display:block; border:1px solid var(--rule); border-radius:4px;}
+.banner{width:100%; display:block; border:1px solid var(--rule); border-radius:4px;}
+.card img.ph{height:200px; object-fit:cover;}
+.card img.ph.black{object-position:88% center;}
+.col img.ph{height:210px; object-fit:cover;}
+
+/* footer */
+footer{padding-block:28px 42px; display:flex; flex-direction:column; gap:10px;}
+footer .line{font-family:var(--serif); font-style:italic; font-size:22px; color:var(--display);}
+footer .small{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--quiet);}
+footer .note{font-size:12px; color:var(--quiet);}
+footer .note b{color:var(--kicker); font-weight:600;}
