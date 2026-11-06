@@ -139,5 +139,27 @@
     <p class="note"><b>Final candidate · internal review only — not for circulation.</b> "The House of 11" master name is the Founder's working choice, pending his lock; the "11" marks await trademark clearance. Root migration pending legal review of the live suite.</p>
   </footer>
 </div>
+
+<div id="agegate" role="dialog" aria-modal="true" style="position:fixed;inset:0;z-index:9999;background:#2A1C12;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;">
+  <div style="max-width:30em;">
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;color:#E9CF9B;letter-spacing:.08em;">11</div>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px;color:#C7A770;line-height:1.5;margin:14px 0 6px;">The House of 11 makes rum.</p>
+    <p style="font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C6A15B;line-height:1.8;margin:0 0 22px;">You must be of legal drinking age<br>in your country of residence to enter.</p>
+    <button id="ageyes" style="background:none;border:1px solid #856B42;color:#E9CF9B;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:12px 26px;cursor:pointer;margin:4px 8px;">I am of legal age — enter</button>
+    <button id="ageno" style="background:none;border:none;color:#9E8052;font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:12px 10px;cursor:pointer;margin:4px;">I am not</button>
+    <p style="font-family:Montserrat,sans-serif;font-size:9px;letter-spacing:.1em;color:#856B42;margin-top:20px;">Please drink responsibly.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var g=document.getElementById('agegate');if(!g)return;
+  var ok=false;
+  try{ok=sessionStorage.getItem('h11age')==='1';}catch(e){ok=false;}
+  if(!ok){g.style.display='flex';document.documentElement.style.overflow='hidden';}
+  var y=document.getElementById('ageyes'),n=document.getElementById('ageno');
+  if(y)y.onclick=function(){try{sessionStorage.setItem('h11age','1');}catch(e){}g.style.display='none';document.documentElement.style.overflow='';};
+  if(n)n.onclick=function(){window.location.href='https://www.responsibility.org/';};
+})();
+</script>
 </body>
 </html>
