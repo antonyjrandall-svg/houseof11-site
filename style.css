@@ -91,3 +91,11 @@ footer .line{font-family:var(--serif); font-style:italic; font-size:22px; color:
 footer .small{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--quiet);}
 footer .note{font-size:12px; color:var(--quiet);}
 footer .note b{color:var(--kicker); font-weight:600;}
+
+/* Mobile legibility — site review item 29 (Richard, 6 Nov) */
+@media (max-width: 600px){
+  .smallnote{font-size:12px; line-height:1.6;}
+  .note{font-size:11px; line-height:1.6;}
+  .lede{font-size:16px; line-height:1.65;}
+  .kicker{font-size:11px;}
+}
