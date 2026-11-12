@@ -105,13 +105,31 @@
     </div>
   </section>
 
+  <section>
+    <div class="quiet grain">
+      <p class="q-k">The hero&rsquo;s register · bartenders first</p>
+      <h3>You hold the shaker. You carry the story.</h3>
+      <p>Bartenders are the heroes of this house — every pour raises the island. Sign the register with your name, your bar and your city: first in line for tastings, first allocations and the serve specs. And the best of the register sail home — Barbados, the stills, the academy.</p>
+      <form class="row" id="heroform">
+        <input type="text" id="hname" placeholder="Your name" required autocomplete="name">
+        <input type="text" id="hbar" placeholder="Your bar · your city" required>
+        <button type="submit">Sign the register</button>
+      </form>
+      <p class="small">The register reaches a person, not a machine. We write only when there&rsquo;s something worth saying.</p>
+    </div>
+  </section>
+
   <section class="last">
-    <div class="band">
-      <p class="kicker">The list</p>
-      <h2>Be first to the first pour</h2>
-      <p>Join the list for first allocation, launch invitations and the story as it unfolds. Email us your name, where you are, and a line about yourself — and say if you&rsquo;re happy to receive updates; we&rsquo;ll keep your place and only write when there&rsquo;s something worth saying:</p>
-      <p class="mail"><a href="mailto:richard@11parishesrum.com?subject=The%20list%20%E2%80%94%2011%20Parishes" style="color:inherit;text-decoration:none;">richard@11parishesrum.com</a></p>
-      <p class="smallnote">A one-step registration form is in build; until it ships, email reaches a person directly.</p>
+    <div class="quiet grain">
+      <p class="q-k">The list · first to the first pour</p>
+      <h3>Be aboard before the maiden voyage.</h3>
+      <p>Join the list for first allocation, launch invitations and the story as it unfolds — say where you are and whether you&rsquo;re happy to receive updates. We&rsquo;ll keep your place and only write when there&rsquo;s something worth saying.</p>
+      <form class="row" id="listform">
+        <input type="text" id="lname" placeholder="Your name" required autocomplete="name">
+        <input type="text" id="lwhere" placeholder="Where in the world you are" required>
+        <button type="submit">Join the list</button>
+      </form>
+      <p class="small">Goes directly to the house. No machines, no noise.</p>
     </div>
   </section>
 
@@ -141,6 +159,23 @@
   var y=document.getElementById('ageyes'),n=document.getElementById('ageno');
   if(y)y.onclick=function(){try{sessionStorage.setItem('h11age','1');}catch(e){}g.style.display='none';document.documentElement.style.overflow='';};
   if(n)n.onclick=function(){window.location.href='https://www.responsibility.org/';};
+})();
+</script>
+<script>
+(function(){
+  function wire(id, subject, build){
+    var f=document.getElementById(id); if(!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      location.href='mailto:richard@11parishesrum.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(build());
+    });
+  }
+  wire('heroform','The hero\u2019s register \u2014 11 Parishes', function(){
+    return 'Name: '+document.getElementById('hname').value+'\nBar / city: '+document.getElementById('hbar').value+'\n\nSigned the hero\u2019s register at housesof11.com.';
+  });
+  wire('listform','The list \u2014 11 Parishes', function(){
+    return 'Name: '+document.getElementById('lname').value+'\nWhere: '+document.getElementById('lwhere').value+'\n\nJoined the list at housesof11.com. Happy to receive updates.';
+  });
 })();
 </script>
 </body>

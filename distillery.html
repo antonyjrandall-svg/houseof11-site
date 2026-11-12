@@ -75,8 +75,13 @@
     <div class="band">
       <p class="kicker">Trade enquiries</p>
       <h2>Talk to the still</h2>
-      <p>Bulk, casks, liquid development or a distillery of your own — write to us with your brief:</p>
-      <p class="mail">richard@11parishesrum.com</p>
+      <p>Bulk, casks, liquid development or a distillery of your own — one line and the brief, straight to a person.</p>
+      <form class="row quietrow" id="tradeform" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
+        <input type="text" id="tname" placeholder="Your name &middot; your company" required style="flex:1 1 220px;background:transparent;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:14px;padding:12px 14px;min-height:46px;">
+        <input type="text" id="tbrief" placeholder="One line on the brief" required style="flex:2 1 280px;background:transparent;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:14px;padding:12px 14px;min-height:46px;">
+        <button type="submit" style="background:none;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:12px 24px;min-height:46px;cursor:pointer;">Send the brief</button>
+      </form>
+      <p class="smallnote">Terms are agreed person to person — never on this site.</p>
     </div>
   </section>
 
@@ -107,6 +112,9 @@
   if(y)y.onclick=function(){try{sessionStorage.setItem('h11age','1');}catch(e){}g.style.display='none';document.documentElement.style.overflow='';};
   if(n)n.onclick=function(){window.location.href='https://www.responsibility.org/';};
 })();
+</script>
+<script>
+(function(){var f=document.getElementById('tradeform');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();location.href='mailto:richard@11parishesrum.com?subject='+encodeURIComponent('Trade brief \u2014 11 Distillery')+'&body='+encodeURIComponent('From: '+document.getElementById('tname').value+'\nBrief: '+document.getElementById('tbrief').value+'\n\nSent from the trade line at housesof11.com.');});})();
 </script>
 </body>
 </html>

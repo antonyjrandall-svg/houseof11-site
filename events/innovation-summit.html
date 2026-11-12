@@ -29,6 +29,15 @@ html.gated body{display:none;}
 .back{font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;}
 .back a{color:var(--kick);text-decoration:none;}
 @media (max-width:880px){.days{grid-template-columns:1fr;}.room ul{grid-template-columns:1fr;}.ev-hero{padding:52px 22px 56px;}}
+
+body{background:var(--sea);}
+.ev-hero{background:radial-gradient(1100px 480px at 70% -10%, rgba(127,168,184,.08), transparent 60%),#0c1517;border-color:var(--searule);}
+.day{background:var(--seapanel);border-color:var(--searule);}
+.room{background:#0c1517;border-color:var(--searule);}
+.outcomes{background:linear-gradient(120deg,#1b2b2e,#162426 60%);border-color:#2f4347;}
+section{border-bottom-color:#22343a;}
+.monument{position:absolute;right:-8px;top:-54px;font-family:var(--serif);font-size:min(44vh,330px);line-height:1;color:rgba(233,207,155,.055);pointer-events:none;user-select:none;}
+.coords{font-family:var(--sans);font-size:10px;letter-spacing:.22em;color:#7FA8B8;}
 </style>
 <script>
 document.documentElement.className='gated';
@@ -50,10 +59,11 @@ try{ if(sessionStorage.getItem('h11door')==='1'){ document.documentElement.class
   </header>
 
   <div class="ev-hero">
+    <span class="monument">XI</span>
     <span class="n">Voyage XI · the homecoming</span>
     <h1>The Innovation<br>Summit.</h1>
     <div class="ev-meta">
-      <span>Barbados</span><span>Every November</span><span>First edition · November 2027</span><span>25–40 travellers + the island's room</span>
+      <span>Barbados</span><span>Every November</span><span>First edition · November 2027</span><span>25–40 travellers + the island's room</span><span class="coords">13°06′N 59°37′W</span>
     </div>
     <div class="hrule"></div>
     <p class="lede">Once a year, the whole house comes home with a purpose: to put the world's ocean-energy technology, the capital that funds it, the industries that will buy its power and the Government of Barbados in one room — until the island that made the rum is powered by its own sea.</p>

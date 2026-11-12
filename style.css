@@ -99,3 +99,87 @@ footer .note b{color:var(--kicker); font-weight:600;}
   .lede{font-size:16px; line-height:1.65;}
   .kicker{font-size:11px;}
 }
+
+/* ============================================================
+   V4 — THE CAPTAIN'S CHART
+   Two worlds, one gold. Treasure materials, never costume.
+   ============================================================ */
+:root{
+  --sea:#0F1A1C; --seapanel:#162426; --searule:#2a3b3e; --wake:#7FA8B8;
+}
+
+/* paper grain — the chart, not cardboard (2–3%) */
+.grain{position:relative;}
+.grain::before{content:""; position:absolute; inset:0; pointer-events:none; opacity:.028; mix-blend-mode:overlay;
+  background-image:repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 3px),
+                   repeating-linear-gradient(90deg, #fff 0 2px, transparent 2px 5px);}
+
+/* the gold line draws itself — once per page */
+.drawline{position:relative; overflow:hidden; background:none !important;}
+.drawline::after{content:""; position:absolute; inset:0; background:var(--rule); transform:scaleX(0); transform-origin:left center; animation:draw 1.6s ease-out .3s forwards;}
+@keyframes draw{to{transform:scaleX(1);}}
+
+/* the horizon hero — home */
+.horizon{position:relative; margin:26px 0 0; padding:110px 36px 96px; border:1px solid var(--panel-2);
+  background:radial-gradient(130% 95% at 50% 118%, #3a2a18 0%, #241810 46%, #150e08 100%);}
+.horizon .sealine{position:absolute; left:0; right:0; top:34%; height:1px;}
+.horizon .sealine::after{content:""; position:absolute; inset:0; background:rgba(233,207,155,.38); transform:scaleX(0); transform-origin:left center; animation:draw 2.2s ease-out .2s forwards;}
+.horizon .lamp{position:absolute; left:61%; top:calc(34% - 2.5px); width:5px; height:5px; border-radius:50%; background:var(--display);
+  box-shadow:0 0 14px 4px rgba(233,207,155,.55); opacity:0; animation:lampup 1.2s ease-out 2s forwards;}
+@keyframes lampup{to{opacity:1;}}
+.horizon .pre{font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--kicker); font-style:normal;}
+.horizon h1{font-size:clamp(46px, 7vw, 82px); line-height:1.03; margin:10px 0 16px;}
+.horizon p.lede{font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.55; margin:0; max-width:34em; color:var(--body);}
+
+/* the doors as chart quadrants */
+.doorsgrid{position:relative;}
+.doorsgrid::before{content:""; position:absolute; left:50%; top:0; bottom:0; border-left:1px solid rgba(127,168,184,.22); pointer-events:none;}
+@media (max-width:880px){ .doorsgrid::before{display:none;} }
+.card{position:relative; overflow:hidden;}
+.card .monu{position:absolute; right:6px; top:-28px; font-family:var(--serif); font-size:110px; line-height:1; color:rgba(233,207,155,.07); pointer-events:none; user-select:none;}
+.card:hover{border-color:var(--kicker);}
+.card:hover h3 a{color:var(--display);}
+
+/* numeral as monument — voyage pages & cards */
+.monument{position:absolute; right:-10px; top:-40px; font-family:var(--serif); font-size:min(40vh, 320px); line-height:1; color:rgba(233,207,155,.06); pointer-events:none; user-select:none; z-index:0;}
+
+/* coordinates as jewellery */
+.coords{font-family:var(--sans); font-size:10px; letter-spacing:.22em; color:var(--wake); text-transform:uppercase;}
+
+/* the sea — member world */
+.sea-world{background:var(--sea) !important;}
+.sea-world .panelled, .sea-world .voy{background:var(--seapanel); border-color:var(--searule);}
+.lampup-transition{transition:background-color .6s ease;}
+
+/* the quiet form — one hand to shake per journey */
+.quiet{border:1px solid var(--panel-2); background:var(--panel); border-radius:4px; padding:26px 26px; display:flex; flex-direction:column; gap:10px;}
+.quiet .q-k{font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--kicker); margin:0;}
+.quiet h3{font-size:24px; margin:0;}
+.quiet p{margin:0; font-size:14px; max-width:44em;}
+.quiet .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;}
+.quiet input{flex:1 1 220px; background:transparent; border:1px solid var(--rule); color:var(--display); font-family:var(--sans); font-size:14px; padding:12px 14px; min-height:46px;}
+.quiet input::placeholder{color:var(--quiet);}
+.quiet button, .quiet .go{background:none; border:1px solid var(--rule); color:var(--display); font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:600; padding:12px 24px; min-height:46px; cursor:pointer;}
+.quiet button:hover, .quiet .go:hover{border-color:var(--kicker);}
+.quiet .small{font-size:11.5px; color:var(--quiet);}
+
+/* craft floor — tap targets (UX pass P2) */
+@media (max-width:700px){
+  nav.site{gap:6px 14px;}
+  nav.site a{padding:10px 4px; font-size:12px;}
+  footer a, .cta a{padding-block:8px; display:inline-block;}
+}
+/* craft floor — contrast lift for the quietest gold at small sizes (UX pass P3) */
+@media (max-width:700px){
+  .smallnote, footer .note, .card .abv{color:#B08F5F;}
+}
+/* craft floor — reduced motion: the route simply exists, already drawn */
+@media (prefers-reduced-motion: reduce){
+  .drawline::after, .horizon .sealine::after{animation:none; transform:scaleX(1);}
+  .horizon .lamp{animation:none; opacity:1;}
+  .lampup-transition{transition:none;}
+  .chartdraw{animation:none !important; stroke-dashoffset:0 !important;}
+}
+/* the living chart — routes draw once */
+.chartdraw{stroke-dasharray:1200; stroke-dashoffset:1200; animation:chart 3s ease-out .4s forwards;}
+@keyframes chart{to{stroke-dashoffset:0;}}

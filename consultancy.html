@@ -109,7 +109,12 @@
         <div class="col"><span class="tag">Operate</span><p>Management, training and performance improvement — we run the room or lift the one you have, standards and dashboard included.</p></div>
         <div class="col"><span class="tag">Partner</span><p>Selected joint ventures and revenue-share projects, subject to agreement — for venues, events and brands that want the house all-in.</p></div>
       </div>
-      <p class="mail">richard@11parishesrum.com</p>
+      <form class="row" id="roomform" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
+        <input type="text" id="rname" placeholder="Your name &middot; your venue" required style="flex:1 1 220px;background:transparent;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:14px;padding:12px 14px;min-height:46px;">
+        <input type="text" id="rbrief" placeholder="One line on the room" required style="flex:2 1 280px;background:transparent;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:14px;padding:12px 14px;min-height:46px;">
+        <button type="submit" style="background:none;border:1px solid var(--rule);color:var(--display);font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:12px 24px;min-height:46px;cursor:pointer;">Talk to the house</button>
+      </form>
+      <p class="smallnote">One line reaches a person directly. Terms person to person — never on this site.</p>
     </div>
   </section>
 
@@ -139,6 +144,9 @@
   if(y)y.onclick=function(){try{sessionStorage.setItem('h11age','1');}catch(e){}g.style.display='none';document.documentElement.style.overflow='';};
   if(n)n.onclick=function(){window.location.href='https://www.responsibility.org/';};
 })();
+</script>
+<script>
+(function(){var f=document.getElementById('roomform');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();location.href='mailto:richard@11parishesrum.com?subject='+encodeURIComponent('The room \u2014 11 Hospitality')+'&body='+encodeURIComponent('From: '+document.getElementById('rname').value+'\nThe room: '+document.getElementById('rbrief').value+'\n\nSent from housesof11.com.');});})();
 </script>
 </body>
 </html>

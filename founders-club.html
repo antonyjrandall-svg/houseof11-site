@@ -66,6 +66,27 @@
   .wake ul{grid-template-columns:1fr;}
   .fc-hero{padding:56px 22px 60px;}
 }
+
+/* ——— V4 · The Captain's Chart: the sea (member world) ——— */
+body{transition:background-color .6s ease;}
+body.sea{background:var(--sea);}
+body.sea section{border-bottom-color:#22343a;}
+body.sea .voy{background:var(--seapanel);border-color:var(--searule);}
+body.sea .voy.vxi{background:linear-gradient(120deg,#1b2b2e,#162426 60%);border-color:#2f4347;}
+body.sea .fc-chart{background:#0c1517;border-color:var(--searule);}
+body.sea .wake{background:linear-gradient(180deg,#14241f66,transparent),var(--seapanel);border-color:var(--searule);}
+body.sea .fc-split img{border-color:var(--searule);}
+body.sea .fc-kpis{background:var(--searule);border-color:var(--searule);}
+body.sea .fc-kpis div{background:#121f21;}
+.voy{overflow:hidden;}
+.voy .n{font-size:84px;color:rgba(233,207,155,.08);top:-14px;right:8px;font-style:normal;}
+.voy.vxi .n{font-size:130px;top:-24px;}
+.coords{font-family:var(--sans);font-size:9px;letter-spacing:.2em;color:var(--wake);margin-left:10px;}
+.door .d11{width:88px;height:88px;line-height:86px;border:1px solid #C6A15B;border-radius:50%;margin:0 auto;}
+.door.flick .d11{animation:flick .55s ease;}
+@keyframes flick{0%,100%{opacity:1}30%{opacity:.35}55%{opacity:.75}75%{opacity:.5}}
+.askword{font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--quiet);margin-top:12px;}
+.askword a{color:var(--kick);border-bottom:none;}
 </style>
 </head>
 <body>
@@ -138,6 +159,7 @@
         <button type="submit">Enter</button>
       </form>
       <p class="derr" id="doorerr">That is not the word.</p>
+      <p class="askword">No one to ask? <a href="mailto:richard@11parishesrum.com?subject=The%20door%20%E2%80%94%20one%20line%20about%20me">Write us one line about yourself</a> — the word is only ever given in conversation.</p>
       <p class="dnote">If you have no word, the way in is at the foot of this page.</p>
     </div>
   </section>
@@ -164,17 +186,17 @@
           <line x1="833" y1="0" x2="833" y2="460"/>
         </g>
         <!-- routes -->
-        <g fill="none" stroke="#C6A15B" stroke-opacity=".28" stroke-width="1.2" stroke-dasharray="3 5">
-          <path d="M326,180 Q400,105 500,100"/>
-          <path d="M500,100 Q514,96 527,112"/>
-          <path d="M527,112 Q360,55 203,130"/>
-          <path d="M203,130 Q225,175 285,185"/>
-          <path d="M285,185 Q600,35 888,140"/>
-          <path d="M888,140 Q935,210 914,283"/>
-          <path d="M914,283 Q805,290 700,247"/>
-          <path d="M700,247 Q755,290 820,252"/>
-          <path d="M820,252 Q690,365 551,318"/>
-          <path d="M551,318 Q420,300 335,198"/>
+        <g class="routes" fill="none" stroke="#7FA8B8" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="3 5">
+          <path class="chartdraw" d="M326,180 Q400,105 500,100"/>
+          <path class="chartdraw" d="M500,100 Q514,96 527,112"/>
+          <path class="chartdraw" d="M527,112 Q360,55 203,130"/>
+          <path class="chartdraw" d="M203,130 Q225,175 285,185"/>
+          <path class="chartdraw" d="M285,185 Q600,35 888,140"/>
+          <path class="chartdraw" d="M888,140 Q935,210 914,283"/>
+          <path class="chartdraw" d="M914,283 Q805,290 700,247"/>
+          <path class="chartdraw" d="M700,247 Q755,290 820,252"/>
+          <path class="chartdraw" d="M820,252 Q690,365 551,318"/>
+          <path class="chartdraw" d="M551,318 Q420,300 335,198"/>
         </g>
         <!-- points -->
         <g font-family="Montserrat,sans-serif" font-size="10" letter-spacing="1.5">
@@ -232,17 +254,17 @@
     <p class="kicker">The eleven</p>
     <h2>A year in voyages</h2>
     <div class="voyages">
-      <div class="voy"><span class="n">I</span><h3>The Midnight</h3><p class="pl">St. Barts · New Year's Eve</p><p>The year turns at anchor in Gustavia. One harbour, one countdown, and the only fireworks the crew will ever queue for.</p></div>
-      <div class="voy"><span class="n">II</span><h3>The First Pour</h3><p class="pl">London</p><p>A new 11 Parishes expression, tasted by the crew before the world knows it exists.</p></div>
-      <div class="voy"><span class="n">III</span><h3>The Descent</h3><p class="pl">St. Moritz · The ski trip</p><p>First lifts, long lunches, a mountain that has kept secrets for a century. The crew skis; the evenings do the business.</p></div>
-      <div class="voy"><span class="n">IV</span><h3>The Summit</h3><p class="pl">Aspen · USA</p><p>A closed day of capital, companies and candour — the people who build, beside the people who back them.</p></div>
-      <div class="voy"><span class="n">V</span><h3>The Still Room</h3><p class="pl">Jamaica</p><p>Inside the Caribbean's working rum world: stills, warehouses, and barrels tasted where they sleep.</p></div>
-      <div class="voy"><span class="n">VI</span><h3>The Table of Eleven</h3><p class="pl">Tokyo</p><p>Eleven seats, one chef, one night. The hardest dinner invitation on earth.</p></div>
-      <div class="voy"><span class="n">VII</span><h3>The Crossing</h3><p class="pl">Australia</p><p>The Whitsundays under sail. A journey, not a venue — you say yes before you know the route.</p></div>
-      <div class="voy"><span class="n">VIII</span><h3>The Quiet Room</h3><p class="pl">A private island</p><p>One extraordinary guest, one room, nothing recorded. The location is never printed.</p></div>
-      <div class="voy"><span class="n">IX</span><h3>The White Night</h3><p class="pl">Bali</p><p>Midsummer, far from home, in a place built for staying up. The club's one unapologetic celebration.</p></div>
-      <div class="voy"><span class="n">X</span><h3>The Pursuit</h3><p class="pl">Cape Town</p><p>Speed, water and altitude. The crew competes; the house keeps score.</p></div>
-      <div class="voy vxi"><span class="n">XI</span><h3>The Innovation Summit</h3><p class="pl">Barbados · Every November · First edition November 2027</p><p>The homecoming with a purpose. The whole house returns to the island — joined by the industries, the technology and the capital that can power Barbados from its own sea. Three working days; the currency is signatures, not applause. The one fixed point in the year, and the reason the other ten exist.</p><a class="enter" href="events/innovation-summit.html">Enter the event →</a></div>
+      <div class="voy"><span class="n">I</span><h3>The Midnight</h3><p class="pl">St. Barts · New Year's Eve<span class="coords">17°54′N 62°51′W</span></p><p>The year turns at anchor in Gustavia. One harbour, one countdown, and the only fireworks the crew will ever queue for.</p></div>
+      <div class="voy"><span class="n">II</span><h3>The First Pour</h3><p class="pl">London<span class="coords">51°30′N 0°07′W</span></p><p>A new 11 Parishes expression, tasted by the crew before the world knows it exists.</p></div>
+      <div class="voy"><span class="n">III</span><h3>The Descent</h3><p class="pl">St. Moritz · The ski trip<span class="coords">46°30′N 9°50′E</span></p><p>First lifts, long lunches, a mountain that has kept secrets for a century. The crew skis; the evenings do the business.</p></div>
+      <div class="voy"><span class="n">IV</span><h3>The Summit</h3><p class="pl">Aspen · USA<span class="coords">39°11′N 106°49′W</span></p><p>A closed day of capital, companies and candour — the people who build, beside the people who back them.</p></div>
+      <div class="voy"><span class="n">V</span><h3>The Still Room</h3><p class="pl">Jamaica<span class="coords">17°58′N 76°48′W</span></p><p>Inside the Caribbean's working rum world: stills, warehouses, and barrels tasted where they sleep.</p></div>
+      <div class="voy"><span class="n">VI</span><h3>The Table of Eleven</h3><p class="pl">Tokyo<span class="coords">35°41′N 139°41′E</span></p><p>Eleven seats, one chef, one night. The hardest dinner invitation on earth.</p></div>
+      <div class="voy"><span class="n">VII</span><h3>The Crossing</h3><p class="pl">Australia<span class="coords">20°17′S 148°59′E</span></p><p>The Whitsundays under sail. A journey, not a venue — you say yes before you know the route.</p></div>
+      <div class="voy"><span class="n">VIII</span><h3>The Quiet Room</h3><p class="pl">A private island<span class="coords">COORDINATES WITHHELD</span></p><p>One extraordinary guest, one room, nothing recorded. The location is never printed.</p></div>
+      <div class="voy"><span class="n">IX</span><h3>The White Night</h3><p class="pl">Bali<span class="coords">8°39′S 115°13′E</span></p><p>Midsummer, far from home, in a place built for staying up. The club's one unapologetic celebration.</p></div>
+      <div class="voy"><span class="n">X</span><h3>The Pursuit</h3><p class="pl">Cape Town<span class="coords">33°55′S 18°25′E</span></p><p>Speed, water and altitude. The crew competes; the house keeps score.</p></div>
+      <div class="voy vxi"><span class="n">XI</span><h3>The Innovation Summit</h3><p class="pl">Barbados · Every November · First edition November 2027<span class="coords">13°06′N 59°37′W</span></p><p>The homecoming with a purpose. The whole house returns to the island — joined by the industries, the technology and the capital that can power Barbados from its own sea. Three working days; the currency is signatures, not applause. The one fixed point in the year, and the reason the other ten exist.</p><a class="enter" href="events/innovation-summit.html">Enter the event →</a></div>
     </div>
     <p class="smallnote">Each voyage is created by a single world-leading curator with access to places that cannot be booked. Themes are printed; venues, dates and guests are spoken, member to member.</p>
   </section>
@@ -317,7 +339,7 @@
       s=document.getElementById('doorsec'),e=document.getElementById('doorerr'),
       w=document.getElementById('doorword');
   if(!f||!m)return;
-  function open(){m.style.display='';s.style.display='none';}
+  function open(){m.style.display='';s.style.display='none';document.body.classList.add('sea');}
   try{if(sessionStorage.getItem('h11door')==='1')open();}catch(x){}
   function norm(v){return v.replace(/\s+/g,' ').trim().toUpperCase();}
   function hex(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');}
@@ -327,7 +349,7 @@
     if(!v||!window.crypto||!crypto.subtle){e.style.display='block';return;}
     crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(b){
       if(hex(b)===H){try{sessionStorage.setItem('h11door','1');}catch(x){}open();}
-      else{e.style.display='block';w.value='';w.focus();}
+      else{e.style.display='block';w.value='';w.focus();var d=document.querySelector('.door');if(d){d.classList.add('flick');setTimeout(function(){d.classList.remove('flick');},600);}}
     });
   });
 })();
