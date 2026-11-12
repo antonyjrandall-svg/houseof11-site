@@ -183,3 +183,11 @@ footer .note b{color:var(--kicker); font-weight:600;}
 /* the living chart — routes draw once */
 .chartdraw{stroke-dasharray:1200; stroke-dashoffset:1200; animation:chart 3s ease-out .4s forwards;}
 @keyframes chart{to{stroke-dashoffset:0;}}
+
+/* the secret door — the lamp, bottom right; follow it to the harbour */
+.lampdoor{position:fixed;right:18px;bottom:18px;z-index:50;width:38px;height:38px;display:flex;align-items:center;justify-content:center;opacity:.4;transition:opacity .35s;border-bottom:none;}
+.lampdoor:hover,.lampdoor:focus-visible{opacity:1;}
+.lampdoor .dot{width:6px;height:6px;border-radius:50%;background:var(--display);box-shadow:0 0 11px 3px rgba(233,207,155,.5);}
+.lampdoor .lbl{position:absolute;right:42px;white-space:nowrap;font-family:var(--sans);font-size:9px;letter-spacing:.24em;color:var(--kick);text-transform:uppercase;opacity:0;transition:opacity .35s;}
+.lampdoor:hover .lbl,.lampdoor:focus-visible .lbl{opacity:1;}
+@media (max-width:700px){.lampdoor{right:10px;bottom:10px;}}
