@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Harbour</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+html.gated #harbour{display:none;}
+body{background:var(--sea);}
+section{border-bottom-color:#22343a;}
+.hb-hero{position:relative;margin:26px 0 0;padding:84px 36px 88px;background:
+  radial-gradient(1100px 480px at 70% -10%, rgba(127,168,184,.08), transparent 60%),
+  radial-gradient(800px 400px at 8% 115%, rgba(233,207,155,.06), transparent 60%),
+  #0c1517;border:1px solid var(--searule);overflow:hidden;}
+.hb-hero h1{font-size:clamp(40px,6vw,70px);line-height:1.04;margin:8px 0 16px;color:var(--display);font-weight:500;}
+.hb-hero .pre{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--kick);}
+.hb-hero .lede{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;max-width:38em;color:var(--body);}
+.door{background:#0c1517;border:1px solid #2f4347;padding:46px 30px;text-align:center;margin:10px 0;}
+.door .d11{width:88px;height:88px;line-height:86px;border:1px solid #C6A15B;border-radius:50%;margin:0 auto;font-family:var(--serif);font-size:38px;color:var(--display);letter-spacing:.08em;}
+.door p{max-width:34em;margin:14px auto 18px;color:var(--body);}
+.door input{background:#0a1214;border:1px solid #856B42;color:#E9CF9B;font-family:var(--sans);font-size:13px;letter-spacing:.3em;text-transform:uppercase;text-align:center;padding:13px 16px;width:min(320px,80%);outline:none;}
+.door input:focus{border-color:#C6A15B;}
+.door button{background:none;border:1px solid #856B42;color:#E9CF9B;font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:13px 26px;cursor:pointer;margin-left:10px;}
+.door button:hover{border-color:#C6A15B;}
+.door .dnote{font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--quiet);margin-top:16px;}
+.door .derr{color:#d08f7a;font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-top:12px;display:none;}
+.door.flick .d11{animation:flick .55s ease;}
+@keyframes flick{0%,100%{opacity:1}30%{opacity:.35}55%{opacity:.75}75%{opacity:.5}}
+@media (max-width:880px){.door button{margin:12px 0 0;}.hb-hero{padding:56px 22px 60px;}}
+.berths{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.berth{background:var(--seapanel);border:1px solid var(--searule);padding:24px 22px;position:relative;overflow:hidden;}
+.berth h3{margin:0 0 8px;font-size:20px;color:var(--display);font-family:var(--serif);font-weight:500;}
+.berth p{font-size:13.5px;color:var(--body);margin:0;line-height:1.6;}
+.berth .bn{position:absolute;right:8px;top:-16px;font-family:var(--serif);font-size:84px;color:rgba(233,207,155,.07);pointer-events:none;}
+@media (max-width:880px){.berths{grid-template-columns:1fr;}}
+.steps{background:#0c1517;border:1px solid var(--searule);padding:26px 24px;}
+.steps ol{margin:10px 0 0;padding:0 0 0 18px;font-size:14px;color:var(--body);line-height:1.9;}
+.steps li b{color:var(--display);font-weight:500;}
+.quiet{border-color:var(--searule);background:var(--seapanel);}
+</style>
+<script>
+document.documentElement.className='gated';
+try{ if(sessionStorage.getItem('h11harbour')==='1'){ document.documentElement.className=''; var s=document.currentScript; window.addEventListener('DOMContentLoaded',function(){var d=document.getElementById('hdoorsec'); if(d) d.style.display='none';}); } }catch(e){}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark"><a class="eleven" href="index.html">11</a><span class="dom">The Harbour</span></div>
+    <nav class="site">
+      <a href="index.html">The House</a>
+      <a href="why-11.html">Why 11</a>
+    </nav>
+  </header>
+
+  <div class="hb-hero grain">
+    <p class="pre">The House of 11 · By arrangement only</p>
+    <h1>The Harbour.</h1>
+    <div class="hrule drawline"></div>
+    <p class="lede">The crew sails the voyages. The great ships berth in the harbour. For the few who sail with the house at scale, for the long term — this door opens in conversation, not on a page.</p>
+  </div>
+
+  <section id="hdoorsec">
+    <div class="door grain">
+      <div class="d11">11</div>
+      <p class="lede" style="font-style:italic;">What lies past this point is given person to person.</p>
+      <form id="hdoorform" autocomplete="off">
+        <input id="hdoorword" type="password" placeholder="THE WORD" aria-label="The word">
+        <button type="submit">Enter</button>
+      </form>
+      <p class="derr" id="hdoorerr">That is not the word.</p>
+      <p class="dnote">The word is given in conversation — by the founders, or by someone already berthed.</p>
+      <p class="dnote" style="margin-top:10px;">No conversation yet? <a href="mailto:richard@11parishesrum.com?subject=The%20Harbour%20%E2%80%94%20one%20line%20about%20us" style="color:var(--kick);border-bottom:none;">Write us one line about your house</a>.</p>
+    </div>
+  </section>
+
+  <div id="harbour">
+    <section>
+      <p class="kicker">What the harbour is</p>
+      <h2>Alongside the hundred. Never inside it.</h2>
+      <p style="max-width:46em">The Founders 100 are individuals — one hundred seats across two classes, named once, original forever. Their table does not move. The harbour is different water: a small number of berths for institutions, family offices and strategic partners who sail with the house at scale and for the long term. When the berths are taken, the harbour is full. It does not expand.</p>
+    </section>
+
+    <section>
+      <p class="kicker">What a berth carries</p>
+      <div class="berths">
+        <div class="berth"><span class="bn">I</span><h3>First water</h3><p>Berthed ahead of the wider round the house has already charted — the believer&rsquo;s position, taken early, on paper agreed in person.</p></div>
+        <div class="berth"><span class="bn">II</span><h3>The long voyage</h3><p>Standing rights to stay aboard as the house grows — the harbour is built for partners who intend to be here at the end of the story, not the first chapter.</p></div>
+        <div class="berth"><span class="bn">III</span><h3>The still, first</h3><p>First sight of the house&rsquo;s next vessel — the distillery — before its water opens to anyone else.</p></div>
+        <div class="berth"><span class="bn">IV</span><h3>The club&rsquo;s table</h3><p>Each berth may name two principals, invited into the Founders Club as members — a standing extended, never a bundle: the club is a club, and the berth is the berth.</p></div>
+      </div>
+      <p class="smallnote">Every figure, document and term lives behind the harbour&rsquo;s own gate — nothing commercial is written on this page, by design.</p>
+    </section>
+
+    <section>
+      <div class="steps grain">
+        <p class="kicker">How a ship comes in</p>
+        <h2>Five steps, all of them human.</h2>
+        <ol>
+          <li><b>The conversation.</b> You and the founders, person to person. The sorting question is asked here, never by a form.</li>
+          <li><b>The checks.</b> Institutional verification — who you are, how you hold, that you qualify.</li>
+          <li><b>The room.</b> The house&rsquo;s data room opens to you by name: verified entry, agreement signed at the door, every page watermarked.</li>
+          <li><b>The paper.</b> Terms agreed in person, signed on counsel&rsquo;s paper. Nothing about the harbour is standard, deliberately.</li>
+          <li><b>The berth.</b> Your flag in the harbour, your principals at the club&rsquo;s table, and the island&rsquo;s November room every year after.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="last">
+      <div class="quiet grain">
+        <p class="q-k">Request the conversation</p>
+        <h3>Tell us who sails.</h3>
+        <p>One line about your house and how to reach you. It goes to a person, and a person replies.</p>
+        <form class="row" id="harbourform">
+          <input type="text" id="hbname" placeholder="Your name &middot; your institution" required>
+          <input type="text" id="hbline" placeholder="One line about your house" required>
+          <button type="submit">Request the conversation</button>
+        </form>
+        <p class="small">Private. Nothing here is an offer; the harbour opens in conversation only.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p class="line">It takes a world to raise an island.</p>
+    <p class="small">The House of 11 · Born in Barbados · MMXXVI</p>
+    <p class="note">This page describes a conversation, not an offer. No securities are offered or sold on this page; no terms appear here and none should be inferred. Membership of the Founders Club is membership of a private events club — not a security, and never a condition of investment, nor investment of it.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var H='d584e120029325e2fc4fbc206c8b379035d6bef3de88bcefe208e5a25219dd6e';
+  var f=document.getElementById('hdoorform'),m=document.getElementById('harbour'),
+      s=document.getElementById('hdoorsec'),e=document.getElementById('hdoorerr'),
+      w=document.getElementById('hdoorword');
+  if(!f||!m)return;
+  function open(){document.documentElement.className='';m.style.display='';s.style.display='none';}
+  try{if(sessionStorage.getItem('h11harbour')==='1')open();}catch(x){}
+  function norm(v){return v.replace(/\s+/g,' ').trim().toUpperCase();}
+  function hex(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');}
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var v=norm(w.value||'');
+    if(!v||!window.crypto||!crypto.subtle){e.style.display='block';return;}
+    crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(b){
+      if(hex(b)===H){try{sessionStorage.setItem('h11harbour','1');}catch(x){}open();}
+      else{e.style.display='block';w.value='';w.focus();var d=document.querySelector('.door');if(d){d.classList.add('flick');setTimeout(function(){d.classList.remove('flick');},600);}}
+    });
+  });
+  var rf=document.getElementById('harbourform');
+  if(rf){rf.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    location.href='mailto:richard@11parishesrum.com?subject='+encodeURIComponent('The Harbour — request for the conversation')+'&body='+encodeURIComponent('Who: '+document.getElementById('hbname').value+'\nTheir line: '+document.getElementById('hbline').value+'\n\nSent from the Harbour door at housesof11.com.');
+  });}
+})();
+</script>
+</body>
+</html>
