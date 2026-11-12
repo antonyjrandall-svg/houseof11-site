@@ -41,6 +41,14 @@
 .wake li b{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#9fb286;margin-bottom:6px;font-weight:600;}
 .honest{border:1px solid #5d4426;background:#241810;padding:18px 22px;font-size:12.5px;color:var(--body);}
 .honest b{font-family:var(--sans);font-size:9.5px;letter-spacing:.2em;color:var(--kick);text-transform:uppercase;}
+.headlines{background:#241810;border:1px solid #3E2C1C;padding:26px 24px 18px;margin:14px 0 6px;}
+.headlines ol{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 18px;}
+.headlines li{border-top:1px solid #3E2C1C;padding-top:9px;font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--display);}
+.headlines li i{font-family:var(--serif);font-style:italic;color:#9E8052;margin-right:8px;font-size:13px;}
+.headlines .hnote{font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--quiet);margin:14px 0 0;}
+@media (max-width:880px){.headlines ol{grid-template-columns:repeat(2,1fr);}}
+.voy a.enter{display:inline-block;margin-top:10px;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--display);text-decoration:none;border:1px solid #856B42;padding:8px 14px;}
+.voy a.enter:hover{border-color:#C6A15B;}
 .door{background:#241810;border:1px solid #5d4426;padding:46px 30px;text-align:center;margin:10px 0;}
 .door .d11{font-family:var(--serif);font-size:38px;color:var(--display);letter-spacing:.08em;}
 .door p{max-width:34em;margin:10px auto 18px;color:var(--body);}
@@ -97,6 +105,26 @@
       <div><b>11</b><span>Voyages a year</span></div>
       <div><b>25–40</b><span>Travellers, never more</span></div>
       <div><b>1</b><span>Homecoming · Barbados</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="headlines">
+      <p class="kicker">The year, by name only</p>
+      <ol>
+        <li><i>I</i>The Midnight</li>
+        <li><i>II</i>The First Pour</li>
+        <li><i>III</i>The Descent</li>
+        <li><i>IV</i>The Summit</li>
+        <li><i>V</i>The Still Room</li>
+        <li><i>VI</i>The Table of Eleven</li>
+        <li><i>VII</i>The Crossing</li>
+        <li><i>VIII</i>The Quiet Room</li>
+        <li><i>IX</i>The White Night</li>
+        <li><i>X</i>The Pursuit</li>
+        <li><i>XI</i>The Innovation Summit</li>
+      </ol>
+      <p class="hnote">Eleven names. Everything else — the places, the dates, the rooms — lives behind the door.</p>
     </div>
   </section>
 
@@ -214,7 +242,7 @@
       <div class="voy"><span class="n">VIII</span><h3>The Quiet Room</h3><p class="pl">A private island</p><p>One extraordinary guest, one room, nothing recorded. The location is never printed.</p></div>
       <div class="voy"><span class="n">IX</span><h3>The White Night</h3><p class="pl">Bali</p><p>Midsummer, far from home, in a place built for staying up. The club's one unapologetic celebration.</p></div>
       <div class="voy"><span class="n">X</span><h3>The Pursuit</h3><p class="pl">Cape Town</p><p>Speed, water and altitude. The crew competes; the house keeps score.</p></div>
-      <div class="voy vxi"><span class="n">XI</span><h3>The Gathering</h3><p class="pl">Barbados · Crop Over</p><p>The whole house comes home — Founders, members, makers and the island where the story began. The one fixed point in the year, and the reason the other ten exist.</p></div>
+      <div class="voy vxi"><span class="n">XI</span><h3>The Innovation Summit</h3><p class="pl">Barbados · Every November · First edition November 2027</p><p>The homecoming with a purpose. The whole house returns to the island — joined by the industries, the technology and the capital that can power Barbados from its own sea. Three working days; the currency is signatures, not applause. The one fixed point in the year, and the reason the other ten exist.</p><a class="enter" href="events/innovation-summit.html">Enter the event →</a></div>
     </div>
     <p class="smallnote">Each voyage is created by a single world-leading curator with access to places that cannot be booked. Themes are printed; venues, dates and guests are spoken, member to member.</p>
   </section>
